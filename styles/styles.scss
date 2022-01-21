@@ -1,0 +1,369 @@
+@import 'navbar';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+//hero section 
+.hero{
+    background: $light;
+    &__container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+       
+        z-index: 1;
+        width: 100%;
+        max-width: 1200px;
+        padding: 0 24px;
+
+        @include tablet{
+            grid-template-columns: 1fr;
+            height: 100%;
+        }
+        &--left{
+            width: 100%;
+            line-height: 1.2;
+
+            @include tablet{
+                padding: 5rem 0;
+            }
+            @include mobile{
+                line-height: 1.5;
+            }
+
+        }
+        &--left h1{
+            font-size: 4rem;
+            color: $lime;
+            @include mobile{
+                font-size: 1.5rem;
+            }
+        }
+        &--left h2{
+            font-size: 4rem;
+            color: $dark;
+            @include mobile{
+                font-size: 2rem;
+            }
+        }
+        &--left p{
+            font-size: 2rem;
+            font-weight: 700;
+            color: $dark;
+            margin-top: 1rem;
+            @include mobile{
+                font-size: 2rem;
+            }
+        }
+        &--btn {
+            font-size: 1rem;
+            background: $lime;
+            padding: 14px 32px;
+            border:none;
+            border-radius: 4px;
+            margin-top: 2rem;
+            color: $light;
+            position: relative;
+            // transition: all 0.3s ease;
+            outline: none;
+        }
+        &--btn a{
+            position: relative;
+            z-index: 2;
+            color: $light;
+            text-decoration: none;
+        }
+        &--btn::after{
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            background: $orangeRed;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            outline: none;
+
+        }
+        &--btn:hover:after{
+            width: 100%;
+        }
+        &--right{
+            text-align: center;
+        }
+        &--img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+.about{
+    background: $white;
+    &__container{
+        // @extend %align-center;
+        // justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        // height: 80vh;
+        width: 100%;
+        max-width: 1200px;
+        padding: 1rem;
+       
+        margin: 50px auto;
+        
+        @include tablet{
+            width: 100%;
+            height: 100%;
+            grid-template-columns: 1fr;
+           
+          
+        }
+        &--left{
+           text-align: center;
+           margin-right: 5rem;
+           @include tablet {
+            order: 2;
+            margin-right: 0;
+            
+        }
+        }
+       
+        &--left img{
+            
+            width: 100%;
+            height: 100%;
+            padding: 0 2rem;
+           
+            
+        }
+        &--right{
+            line-height: 1.2;
+            width: 100%;
+            @include tablet{
+               
+                padding: 2rem 0;
+
+            }
+            @include mobile{
+                line-height: 1.5;
+            }
+        }
+      
+        &--right h2{
+            color: $lime;
+            font-size: 2.5rem;
+            margin: 2rem 0;
+            text-transform: capitalize;
+        }
+        &--right p{
+            font-size: 1.5rem;
+            line-height: 1.5;
+            color: $dark;
+        }
+        &--btn{
+            margin: 1rem 0;
+            
+        }
+        
+    }
+}
+.lorem{
+   background-color: $light;
+   display: grid;
+   place-items: center;
+   //   text-align: center;
+   &__container
+   {
+       
+       width: 100%;
+        max-width: 1500px;
+        @extend %align-center;
+       justify-content: center;
+       text-align: center;
+       padding: 100px 200px;
+       @include tablet{
+        padding: 50px 50px;
+    
+    }
+   
+    p{
+        font-size: 1.2rem;
+        line-height: 1.5;
+        color: $dark;
+        position: relative;
+        z-index: 1;
+    }
+    p::before{
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: $orangeRed;
+        opacity: 0.7;
+        top: -30px;
+        left: -70px;
+        z-index: -1;
+        animation: leftright 2s linear
+        alternate-reverse infinite ;
+    }
+    p::after{
+     content: '';
+     position: absolute;
+     width: 70px;
+     height:70px;
+     border-radius: 50%;
+     background-color: $orangeRed;
+     opacity: 0.7;
+     bottom : -50px;
+     right : -30px;
+     z-index: -1;
+    //  animation: leftright 2s linear alternate infinite ;
+ }
+      
+   }
+   
+}
+.services{
+    background: $white;
+    padding: 100px 0px;
+    h1{
+        text-align: center;
+        font-size: 3rem;
+        color: $lime;
+        margin-bottom: 80px;
+    }
+    &__container{
+        width: 100%;
+        max-width: 1300px;
+        // background: $orangeRed;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 30px;
+        justify-items: center;
+        margin: 0 auto;
+        @include tablet{
+            grid-template-columns: repeat(1,1fr);
+        }
+     
+        &--card{
+            background: $light;
+            // display: inline;
+            width: 90%;
+            //  height: 400px;
+            // margin: 30px 0px;
+            padding: 50px;
+            border-radius: 5px;
+            border-bottom: 5px solid $lime;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            @include tablet{
+                width: 80%; 
+            }
+            @include mobile{
+                width: 90%; 
+            }
+       
+        }
+
+        
+       &--card:hover{
+        transition: all 0.3s ease-in-out;
+           box-shadow: 0 6px 6px 6px rgba($color: #000000, $alpha: 0.6);
+          
+       }
+       &--card::before{
+           position: absolute;
+           content: '';
+           border-radius: 5px;
+           border-bottom: 5px solid $orangeRed;
+           transition: all 0.8s ease-in-out;
+           height: 100%;
+           width: 0%;
+           top: 0;
+           left: 0;
+       }
+       &--card:hover::before{
+           width: 100%;
+           
+       }
+        &--card img{
+            max-width: 80px;
+            max-height: 80px;
+        }
+        &--card h3{
+            font-size: 1.5rem;
+            margin: 50px 0px 20px;
+           
+            text-transform: capitalize;
+        }
+        &--card:hover h3{
+            color: $lime;
+            transition: all 0.3s ease-in-out;
+        }
+        &--card p{
+            line-height: 1.3;
+            letter-spacing: 1px;
+            font-size: 1rem;
+            color: $dark;
+        }
+        
+    }
+
+}
+.process{
+    background: $light;
+    &__container{
+        width: 100%;
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        padding: 100px 0px;
+        margin: 0px auto;
+        // background: $blue;
+        @include tablet{
+            grid-template-columns: 1fr;
+            // grid-gap: 100px;
+        }
+        &--left{
+            text-align: center;
+           
+            
+        }
+        &--left img{
+            max-width:70%;
+            max-height:70%;
+                @include tablet{
+                    width: 60%;
+                    height:60%;
+                }
+
+        }
+        &--right{
+            padding: 0px 20px;
+        }
+        &--right h1{
+            text-transform: capitalize;
+        }
+        &--right ul{
+            margin: 30px 0px;
+            list-style: none;
+        }
+        &--right li{
+            padding-bottom: 20px;
+            padding-left: 30px;
+            line-height: 1.5;
+            font-size: 1rem;
+            
+        }
+    }
+}
