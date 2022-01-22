@@ -74,7 +74,7 @@
     transform: translateX(100px);
   }
 }
-.lorem__container, .navbar__menu--links, .navbar__menu, .navbar__logo {
+.contact__container--form, .contact__container--icons, .contact__container, .lorem__container, .navbar__menu--links, .navbar__menu, .navbar__logo {
   display: flex;
   align-items: center;
 }
@@ -142,6 +142,19 @@
   transition: all 0.3s ease;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #00cc66;
+  border-radius: 10px;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -189,7 +202,7 @@
 }
 @media screen and (max-width: 280px) {
   .hero__container--left h1 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
 }
 .hero__container--left h2 {
@@ -209,7 +222,7 @@
 }
 @media screen and (max-width: 280px) {
   .hero__container--left p {
-    font-size: 2rem;
+    font-size: 1rem;
   }
 }
 .hero__container--btn {
@@ -299,7 +312,7 @@
     line-height: 1.5;
   }
 }
-.about__container--right h2 {
+.about__container--right h1 {
   color: #00cc66;
   font-size: 2.5rem;
   margin: 2rem 0;
@@ -328,7 +341,7 @@
 }
 @media screen and (max-width: 768px) {
   .lorem__container {
-    padding: 50px 50px;
+    padding: 80px 50px;
   }
 }
 .lorem__container p {
@@ -370,9 +383,14 @@
 }
 .services h1 {
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #00cc66;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 768px) {
+  .services h1 {
+    font-size: 2rem;
+  }
 }
 .services__container {
   width: 100%;
@@ -482,6 +500,13 @@
 }
 .process__container--right h1 {
   text-transform: capitalize;
+  font-size: 2.5rem;
+  color: #00cc66;
+}
+@media screen and (max-width: 768px) {
+  .process__container--right h1 {
+    font-size: 2rem;
+  }
 }
 .process__container--right ul {
   margin: 30px 0px;
@@ -492,4 +517,130 @@
   padding-left: 30px;
   line-height: 1.5;
   font-size: 1rem;
+}
+
+.projects {
+  background: #ffffff;
+}
+.projects__container {
+  width: 100%;
+  max-width: 1300px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  justify-items: center;
+  margin: 0 auto;
+  padding: 30px;
+}
+@media screen and (max-width: 768px) {
+  .projects__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.projects__container--left {
+  display: grid;
+  place-items: center;
+}
+.projects__container--left h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #00cc66;
+}
+@media screen and (max-width: 768px) {
+  .projects__container--left h1 {
+    font-size: 2rem;
+  }
+}
+.projects__container--left p {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  margin: 20px 0;
+}
+.projects__container--right {
+  display: grid;
+  place-items: center;
+}
+.projects__container .swiper {
+  width: 100%;
+  padding: 20px 0 40px;
+}
+.projects__container .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.projects__container--right img {
+  width: 50%;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 280px) {
+  .projects__container--right img {
+    width: 70%;
+    height: 70%;
+  }
+}
+
+.contact {
+  background-color: #f7f7f7;
+}
+.contact__container {
+  width: 100%;
+  max-width: 1200px;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px 0;
+  margin: 0 auto;
+}
+.contact__container h1 {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  margin: 0 10px;
+  color: #00cc66;
+}
+@media screen and (max-width: 768px) {
+  .contact__container h1 {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 280px) {
+  .contact__container h1 {
+    font-size: 1.5rem;
+  }
+}
+.contact__container--icons {
+  width: 100%;
+  justify-content: space-evenly;
+  padding: 50px 0 0px;
+}
+.contact__container--icons svg {
+  color: #00cc66;
+  width: 30px;
+}
+.contact__container--form {
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 10px;
+}
+.contact__container--form input, .contact__container--form textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+.contact__container input[type=submit] {
+  width: auto;
+  background-color: #00cc66;
+  color: white;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.contact__container--form input:focus, .contact__container--form textarea:focus-within {
+  border: 1px solid #00cc66;
+  outline: none;
 }/*# sourceMappingURL=styles.css.map */

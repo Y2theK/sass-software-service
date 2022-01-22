@@ -1,5 +1,15 @@
 @import 'navbar';
-
+html{
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-thumb
+{
+    background-color: $lime;
+    border-radius: 10px;
+}
 *{
     box-sizing: border-box;
     margin: 0;
@@ -41,7 +51,7 @@
             font-size: 4rem;
             color: $lime;
             @include mobile{
-                font-size: 1.5rem;
+                font-size: 2.5rem;
             }
         }
         &--left h2{
@@ -57,7 +67,7 @@
             color: $dark;
             margin-top: 1rem;
             @include mobile{
-                font-size: 2rem;
+                font-size: 1rem;
             }
         }
         &--btn {
@@ -155,7 +165,7 @@
             }
         }
       
-        &--right h2{
+        &--right h1{
             color: $lime;
             font-size: 2.5rem;
             margin: 2rem 0;
@@ -188,7 +198,7 @@
        text-align: center;
        padding: 100px 200px;
        @include tablet{
-        padding: 50px 50px;
+        padding: 80px 50px;
     
     }
    
@@ -235,9 +245,13 @@
     padding: 100px 0px;
     h1{
         text-align: center;
-        font-size: 3rem;
+        font-size: 2.5rem;
         color: $lime;
-        margin-bottom: 80px;
+        margin-bottom: 50px;
+        @include tablet{
+            font-size: 2rem;
+        }
+       
     }
     &__container{
         width: 100%;
@@ -353,6 +367,11 @@
         }
         &--right h1{
             text-transform: capitalize;
+            font-size: 2.5rem;
+            color: $lime;
+            @include tablet{
+                font-size: 2rem;
+            }
         }
         &--right ul{
             margin: 30px 0px;
@@ -364,6 +383,138 @@
             line-height: 1.5;
             font-size: 1rem;
             
+        }
+    }
+}
+.projects{
+    background: $white;
+    &__container{
+        // background: saddlebrown;
+        width: 100%;
+        max-width: 1300px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 30px;
+        justify-items: center;
+        margin: 0 auto;
+        padding: 30px;
+        // height: 80vh;
+        @include tablet{
+            grid-template-columns: repeat(1,1fr);
+        }
+        &--left{
+            display: grid;
+            place-items: center;
+            // background-color: red;
+        }
+        &--left h1{
+            text-align: center;
+            font-size: 2.5rem;      
+            color: $lime;
+           
+            @include tablet{
+                font-size: 2rem;
+            }
+            
+        }
+        &--left p{
+            font-size: 1.2rem;
+            line-height: 1.2;
+            letter-spacing: 1px;
+            margin: 20px 0;
+        }
+        &--right{
+            display: grid;
+            place-items: center;
+            // background-color: blue;
+        }
+        .swiper {
+            width: 100%;
+            padding: 20px 0 40px;
+            // background: $light;
+        }
+        .swiper-slide{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &--right img{
+            width: 50%;
+            // height: 0%;
+            margin-bottom: 30px;
+          
+            @include mobile{
+            width: 70%;
+            height: 70%;
+            }
+        }
+       
+    }
+}
+.contact{
+    background-color: $light;
+    &__container{
+        width: 100%;
+        max-width: 1200px;
+        @extend %align-center;
+        justify-content: center;
+        flex-direction: column;        
+        padding: 50px 0;
+        margin: 0 auto;
+        h1{
+            font-size: 2.5rem;
+            text-transform: capitalize;
+            margin: 0 10px;
+            color: $lime;
+            @include tablet{
+                font-size: 2rem;
+            }
+            @include mobile{
+                font-size: 1.5rem;
+            }
+        }
+        &--icons{
+            width: 100%;
+            // background-color: red;
+           @extend %align-center;
+            justify-content: space-evenly;
+            padding: 50px 0 0px;
+        }
+        &--icons svg{
+            color: $lime;
+            width: 30px;
+
+        }
+        &--form {
+            width: 100%;
+            @extend %align-center;
+            flex-direction: column;
+            justify-content: center;
+             padding: 20px 10px;
+            //  background-color: khaki;
+        }
+        &--form input,&--form textarea{
+            width:100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border:none;
+            border-radius: 5px;
+            font-size: 0.8rem;
+        }
+        input[type=submit]
+        { 
+            width: auto;
+            background-color: $lime;
+            color: white;
+            text-transform: capitalize;
+            font-weight: bold;
+            // display: inline-block;
+        }
+        &--form input:focus,&--form textarea:focus-within{
+            border:1px solid $lime;
+            outline: none;
         }
     }
 }
