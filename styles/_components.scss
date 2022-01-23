@@ -1,3 +1,64 @@
+li{
+    list-style: none;
+}
+.scroll-up{
+    // display: inline-block;
+    cursor: pointer;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 100;
+    svg{
+       
+        color: $light;
+        fill: $orangeRed;
+        width: 30px;
+       
+    }
+}
+.preloader{
+    
+        background: $white;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        z-index: 9999;
+        display: grid;
+        scroll-behavior: none;
+        place-items: center;
+        
+        .loader{
+            display: flex;
+        }
+        
+        .loader li{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: $orangeRed;
+            margin: 0 5px;
+            animation: loader 1s linear infinite;
+        }
+        .loader li:nth-child(1){
+            animation-delay: 0.2s;
+            
+        }
+        .loader li:nth-child(2){
+            animation-delay: 0.4s;
+        }
+        .loader li:nth-child(3){
+            animation-delay: 0.6s;
+        }
+        .loader li:nth-child(4){
+            animation-delay: 0.8s;
+        }
+        .loader li:nth-child(5){
+            animation-delay: 1s;
+        }
+    
+   
+}
+
 .btn{
     padding:12px 24px;
     border: none;
@@ -5,7 +66,9 @@
     border-radius: 4px;
     background: $lime;
     color: $light;
+    cursor: pointer;
     text-transform: uppercase;
+    text-decoration: none;
     a{
         text-decoration: none;
         color: $light;

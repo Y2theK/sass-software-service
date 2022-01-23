@@ -24,21 +24,48 @@
 
   </head>
   <body>
+    <!-- preloader -->
+    <div class="preloader">
+    
+        <ul class="loader">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+    
+    </div>
+    <!-- end preloader -->
+    <!-- scroll up  -->
+    <div class="scroll-up">
+      <div class="scroll-up-item">
+        <a href="#">
+        <svg style="width: 50px;" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 11l3-3m0 0l3 3m-3-3v8m0-13a9 9 0 110 18 9 9 0 010-18z"></path></svg>
+      </a>
+      </div>
+    </div>
+    <!-- END scroll up  -->
     <!-- navbar -->
     <nav class="navbar">
-      <a href="/" class="navbar__logo">SASS</a>
+      <a href="#" class="navbar__logo">
+        <img src="./images/letter-s.png" alt="brand-logo" width="40px">
+        ASS</a>
       <div class="navbar__bars">
         <i class="fas fa-bars"></i>
+        <i class="fas fa-times"></i>
       </div>
       <div class="navbar__menu">
-        <a href="" class="navbar__menu--links">Home</a>
-        <a href="" class="navbar__menu--links">Products</a>
-        <a href="" class="navbar__menu--links">Services</a>
-        <a href="" class="navbar__menu--links" id="button">Sign Up</a>
+        <a href="#home" onclick="closeNav()" class="navbar__menu--links">Home</a>
+        <a href="#about" onclick="closeNav()" class="navbar__menu--links">About Us</a>
+        <a href="#services" onclick="closeNav()" class="navbar__menu--links">Services</a>
+        <a href="#projects" onclick="closeNav()" class="navbar__menu--links">Projects</a>
+        <a href="#contact" onclick="closeNav()" class="navbar__menu--links" id="button">Contact</a>
       </div>
     </nav>
+    <!-- end nav bar -->
     <!-- hero section -->
-    <div class="hero">
+    <div class="hero" id="home">
       <div class="hero__container">
         <div class="hero__container--left">
           <h1>They are Coming</h1>
@@ -58,7 +85,7 @@
     </div>
     <!-- end hero section -->
     <!-- about section -->
-    <div class="about">
+    <div class="about" id="about">
       <div class="about__container">
         <div class="about__container--left">
           <img
@@ -86,14 +113,14 @@
     <div class="lorem">
       <div class="lorem__container">
         <p>
-        We focus on every espect of hte development process to help founders to focus strictly on the commercial aspects of their business.
+        We focus on every espect of the development process to help founders to focus strictly on the commercial aspects of their business.
         </p>
       </div>
     </div>
 
     <!-- end lorem section -->
     <!-- service section -->
-    <div class="services">
+    <div class="services" id="services">
       <h1>Our <span class="underlinewear">Services</span></span> </h1>
       <div class="services__container">
         <div class="services__container--card">
@@ -146,7 +173,7 @@
     </div>
     <!-- end service section -->
      <!-- process section -->
-     <div class="process">
+     <div class="process" id="process">
        <div class="process__container">
         <div class="process__container--left">
           <img src="./images/steps.png" alt="" >
@@ -169,13 +196,13 @@
      </div>
       <!-- end process section -->
       <!-- project section -->
-      <div class="projects">
+      <div class="projects" id="projects">
         <div class="projects__container">
           <div class="projects__container--left">
            <div>
             <h1>Our <span class="underlinewear">Projects</span>
             </h1>
-            <p>These are some awesome projects we have dont so far.</p>
+            <p>These are some awesome projects we have done so far.</p>
            </div>
           </div>
           <div class="projects__container--right"> 
@@ -217,13 +244,13 @@
       </div>
       <!-- end project section -->
       <!-- contact section -->
-      <div class="contact">
+      <div class="contact" id="contact">
         <div class="contact__container">
           <h1>Tell Us about your <span class="underlinewear">project</span> </h1>
           <div class="contact__container--icons">
-            <a href="#"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg></a>
-            <a><svg  class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg></a>
-            <a><svg  class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg></a>
+            <a href="tel:199"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg></a>
+            <a href="mailto:y2thek@gmail.com"><svg  class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg></a>
+            <a href="#"><svg  class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg></a>
           </div>
           <div class="contact__container--form">
             
@@ -242,18 +269,58 @@
               
                 <textarea class="contact--form-input" id="summary" placeholder="Summary" rows="8" required></textarea>
                 
-              <input type="submit" value="Get Free Quotes"></button>
+              <input type="submit" class="btn" value="Get Free Quotes"></button>
              
             </form>
           </div>
         </div>
       </div>
       <!-- end contact section -->
+      <!-- footer section -->
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__container--brand">
+          <h2>
+           
+            <a href="#"> SASS</a></h2>
+          </div>
+          <div class="footer__container--navLinks">
+            <ul>
+              <li><a href="#home">Home</a> </li>
+              <li><a href="#about">About</a> </li>
+              <li><a href="#services">Services</a> </li>
+              <li><a href="#projects">Projects</a> </li>
+             
+            </ul>
+          </div>
+          <div class="footer__container--contactInfo">
+            <div class="contact--icons">
+              <div class="">
+               <p><a href="tel:199"><svg  class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg></a>
+               </p>  <p>+95 9765435675</p>
+              </div>
+              <div>
+                <a href=""><svg  class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg></a>
+                <span>Mandalay, Myanmar</span>
+              </div>
+              <div>
+                <a href="y2thek@gmail.com"><svg  class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg></a>
+                <span>y2thek13@gmail.com</span>
+              </div>
+            </div>
+          </div>
+          <div class="footer__container--button">
+            <a href="" class="btn">Hire Us</a>
+          </div>
+        </div>
+      </footer>
+      <!-- end footer section -->
+  
  
  
- 
-      <!-- swiperjs css1 js 1 -->
+ <!-- swiperjs css1 js 1 -->
  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+ <!-- custom js -->
  <script src="./js/app.js"></script>
 
   </body>

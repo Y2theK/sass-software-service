@@ -79,6 +79,7 @@ html{
             margin-top: 2rem;
             color: $light;
             position: relative;
+            cursor: pointer;
             // transition: all 0.3s ease;
             outline: none;
         }
@@ -290,8 +291,9 @@ html{
         
        &--card:hover{
         transition: all 0.3s ease-in-out;
-           box-shadow: 0 6px 6px 6px rgba($color: #000000, $alpha: 0.6);
-          
+        //    box-shadow: 0 6px 6px 6px rgba($color: #000000, $alpha: 0.6);
+        //    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        }
        &--card::before{
            position: absolute;
@@ -438,6 +440,7 @@ html{
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            cursor: pointer;
         }
         &--right img{
             width: 50%;
@@ -491,8 +494,11 @@ html{
             @extend %align-center;
             flex-direction: column;
             justify-content: center;
-             padding: 20px 10px;
+             padding: 20px 30px;
             //  background-color: khaki;
+            @include mobile{
+                padding: 20px;
+            }
         }
         &--form input,&--form textarea{
             width:100%;
@@ -510,7 +516,7 @@ html{
             color: white;
             text-transform: capitalize;
             font-weight: bold;
-            // display: inline-block;
+            cursor: pointer;
         }
         &--form input:focus,&--form textarea:focus-within{
             border:1px solid $lime;
@@ -518,3 +524,87 @@ html{
         }
     }
 }
+.footer{
+    background-color: $white;
+    &__container{
+        width: 100%;
+         max-width: 1300px;
+        padding: 50px 0px;
+        background-color: $white;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 20px;
+        justify-items: center;
+        align-items: center;
+        margin: 0 auto;
+        @include tablet{
+            grid-template-columns: repeat(1,1fr);
+        }
+       
+        &--brand{
+            font-size: 2rem;
+            cursor: pointer;
+           
+        }
+        &--brand a{
+            color: $lime;
+            text-decoration: none;
+
+        }
+        &--navLinks{
+            @include tablet{
+                order: 2;
+            }
+        }
+        &--navLinks li{
+            margin: 20px 0;
+            text-align: center;
+           
+            
+            
+        }
+        &--navLinks li a{
+            color: $blue;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            line-height: 1.3;
+            text-decoration: none;
+            text-transform: uppercase;
+            text-align: center;
+
+        }
+        &--navLinks li a:hover{
+            color : $lime;
+        }
+        &--contactInfo{
+            margin: 10px 0;
+        }
+        &--contactInfo div{
+            // margin: 20px auto;
+            padding: 10px 0;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            line-height: 1.2;   
+        }
+        .contact--icons div
+        {
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 20px;
+        }
+        .contact--icons div:hover{
+            color: $lime;
+        }
+        .contact--icons svg{
+            color: $lime;
+            width: 30px;
+        }
+        &--button{
+            order: 2;
+        }
+       
+    }
+}
+

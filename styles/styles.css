@@ -1,3 +1,63 @@
+li {
+  list-style: none;
+}
+
+.scroll-up {
+  cursor: pointer;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 100;
+}
+.scroll-up svg {
+  color: #f7f7f7;
+  fill: #fb4b4e;
+  width: 30px;
+}
+
+.preloader {
+  background: #ffffff;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 9999;
+  display: grid;
+  scroll-behavior: none;
+  place-items: center;
+}
+.preloader .loader {
+  display: flex;
+}
+.preloader .loader li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fb4b4e;
+  margin: 0 5px;
+  -webkit-animation: loader 1s linear infinite;
+          animation: loader 1s linear infinite;
+}
+.preloader .loader li:nth-child(1) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.preloader .loader li:nth-child(2) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.preloader .loader li:nth-child(3) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.preloader .loader li:nth-child(4) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+.preloader .loader li:nth-child(5) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
 .btn {
   padding: 12px 24px;
   border: none;
@@ -5,7 +65,9 @@
   border-radius: 4px;
   background: #00cc66;
   color: #f7f7f7;
+  cursor: pointer;
   text-transform: uppercase;
+  text-decoration: none;
 }
 .btn a {
   text-decoration: none;
@@ -74,6 +136,50 @@
     transform: translateX(100px);
   }
 }
+@-webkit-keyframes loader {
+  0% {
+    transform: translateY(0px);
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(2);
+    transform: translateY(-30px);
+  }
+  50% {
+    transform: translateY(-30px);
+    transform: scale(2);
+  }
+  75% {
+    transform: scale(1);
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(0);
+    transform: scale(1);
+  }
+}
+@keyframes loader {
+  0% {
+    transform: translateY(0px);
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(2);
+    transform: translateY(-30px);
+  }
+  50% {
+    transform: translateY(-30px);
+    transform: scale(2);
+  }
+  75% {
+    transform: scale(1);
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(0);
+    transform: scale(1);
+  }
+}
 .contact__container--form, .contact__container--icons, .contact__container, .lorem__container, .navbar__menu--links, .navbar__menu, .navbar__logo {
   display: flex;
   align-items: center;
@@ -82,10 +188,11 @@
 .navbar {
   background-color: #f7f7f7;
   height: 80px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 0.5rem calc((100vw - 1200px)/2);
-  z-index: 10;
+  z-index: 1000;
   position: relative;
 }
 .navbar__logo {
@@ -97,6 +204,10 @@
 }
 .navbar__bars {
   opacity: 0;
+  cursor: pointer;
+}
+.navbar__bars .fa-times {
+  display: none;
 }
 @media screen and (max-width: 768px) {
   .navbar__bars {
@@ -112,14 +223,29 @@
   list-style: none;
   text-align: center;
   margin-right: 24px;
+  opacity: 0.95;
 }
 @media screen and (max-width: 768px) {
   .navbar__menu {
-    display: none;
+    z-index: 1000;
+    position: fixed;
+    width: 50%;
+    height: 100vh;
+    left: -100vh;
+    top: 80px;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    row-gap: 70px;
+    align-items: center;
+    background: #f7f7f7;
+    transition: all 0.5s ease-in-out;
   }
 }
 .navbar__menu--links {
   color: #222121;
+  text-transform: uppercase;
   justify-content: center;
   text-decoration: none;
   padding: 0 1rem;
@@ -140,6 +266,15 @@
 .navbar__menu #button:hover {
   background: #fb4b4e;
   transition: all 0.3s ease;
+}
+
+.sticky {
+  background-color: #f7f7f7;
+  position: fixed;
+}
+
+.shownav {
+  left: 0;
 }
 
 html {
@@ -234,6 +369,7 @@ html {
   margin-top: 2rem;
   color: #f7f7f7;
   position: relative;
+  cursor: pointer;
   outline: none;
 }
 .hero__container--btn a {
@@ -428,7 +564,7 @@ html {
 }
 .services__container--card:hover {
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 6px 6px 6px rgba(0, 0, 0, 0.6);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .services__container--card::before {
   position: absolute;
@@ -570,6 +706,7 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .projects__container--right img {
   width: 50%;
@@ -622,7 +759,12 @@ html {
   width: 100%;
   flex-direction: column;
   justify-content: center;
-  padding: 20px 10px;
+  padding: 20px 30px;
+}
+@media screen and (max-width: 280px) {
+  .contact__container--form {
+    padding: 20px;
+  }
 }
 .contact__container--form input, .contact__container--form textarea {
   width: 100%;
@@ -639,8 +781,85 @@ html {
   color: white;
   text-transform: capitalize;
   font-weight: bold;
+  cursor: pointer;
 }
 .contact__container--form input:focus, .contact__container--form textarea:focus-within {
   border: 1px solid #00cc66;
   outline: none;
+}
+
+.footer {
+  background-color: #ffffff;
+}
+.footer__container {
+  width: 100%;
+  max-width: 1300px;
+  padding: 50px 0px;
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  justify-items: center;
+  align-items: center;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .footer__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.footer__container--brand {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.footer__container--brand a {
+  color: #00cc66;
+  text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+  .footer__container--navLinks {
+    order: 2;
+  }
+}
+.footer__container--navLinks li {
+  margin: 20px 0;
+  text-align: center;
+}
+.footer__container--navLinks li a {
+  color: #2541b2;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  line-height: 1.3;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+.footer__container--navLinks li a:hover {
+  color: #00cc66;
+}
+.footer__container--contactInfo {
+  margin: 10px 0;
+}
+.footer__container--contactInfo div {
+  padding: 10px 0;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+.footer__container .contact--icons div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.footer__container .contact--icons div:hover {
+  color: #00cc66;
+}
+.footer__container .contact--icons svg {
+  color: #00cc66;
+  width: 30px;
+}
+.footer__container--button {
+  order: 2;
 }/*# sourceMappingURL=styles.css.map */
