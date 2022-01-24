@@ -2,7 +2,7 @@ li{
     list-style: none;
 }
 .scroll-up{
-    // display: inline-block;
+    // opacity: none;
     cursor: pointer;
     position: fixed;
     bottom: 10px;
@@ -14,6 +14,9 @@ li{
         fill: $orangeRed;
         width: 30px;
        
+    }
+    &-item{
+        display: none;
     }
 }
 .preloader{

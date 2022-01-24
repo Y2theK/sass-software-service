@@ -580,7 +580,7 @@ html{
             margin: 10px 0;
         }
         &--contactInfo div{
-            // margin: 20px auto;
+            // background-color: bisque;
             padding: 10px 0;
             font-size: 1.2rem;
             letter-spacing: 1px;
@@ -592,12 +592,12 @@ html{
             display: flex;
             justify-content: center;
             align-items: center;
-            column-gap: 20px;
         }
         .contact--icons div:hover{
             color: $lime;
         }
         .contact--icons svg{
+            margin-right:20px;
             color: $lime;
             width: 30px;
         }
