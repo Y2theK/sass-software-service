@@ -62,4 +62,4 @@ closeNav = () => {
 const loader = document.querySelector(".preloader");
 setTimeout(function () {
   loader.style.display = "none";
-}, 000);
+}, 2000);
