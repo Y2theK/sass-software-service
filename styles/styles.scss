@@ -14,7 +14,7 @@ html{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'Trebuchet MS', sans-serif;
 }
 //hero section 
 .hero{
@@ -381,6 +381,7 @@ html{
         }
         &--right li{
             padding-bottom: 20px;
+            // background-color: bisque;
             padding-left: 30px;
             line-height: 1.5;
             font-size: 1rem;
