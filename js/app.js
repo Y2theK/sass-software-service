@@ -1,3 +1,7 @@
+// data aos
+AOS.init();
+
+//swiperjs
 const swiper = new Swiper(".swiper", {
   // Optional parameters
   //   direction: "vertical",
