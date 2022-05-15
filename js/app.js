@@ -1,23 +1,23 @@
 // data aos
-// AOS.init();
+AOS.init();
 
 // //swiperjs
-// const swiper = new Swiper(".swiper", {
-//   // Optional parameters
-//   //   direction: "vertical",
-//   loop: true,
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  //   direction: "vertical",
+  loop: true,
 
-//   // If we need pagination
-//   pagination: {
-//     el: ".swiper-pagination",
-//     type: "bullets",
-//     dynamicBullets: true,
-//   },
-//   effect: "fade",
-//   fadeEffect: {
-//     crossFade: true,
-//   },
-// });
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    type: "bullets",
+    dynamicBullets: true,
+  },
+  effect: "fade",
+  fadeEffect: {
+    crossFade: true,
+  },
+});
 
 //navigation
 const navi = document.querySelector("nav");
@@ -63,7 +63,7 @@ closeNav = () => {
 };
 
 //preloader
-// const loader = document.querySelector(".preloader");
-// setTimeout(function () {
-//   loader.style.display = "none";
-// }, 2000);
+const loader = document.querySelector(".preloader");
+setTimeout(function () {
+  loader.style.display = "none";
+}, 2000);
