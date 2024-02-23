@@ -10,7 +10,7 @@ li {
   z-index: 100;
 }
 .scroll-up svg {
-  color: #f7f7f7;
+  color: #f1f5f9;
   fill: #fb4b4e;
   width: 30px;
 }
@@ -67,14 +67,14 @@ li {
   outline: none;
   border-radius: 4px;
   background: #00cc66;
-  color: #f7f7f7;
+  color: #f1f5f9;
   cursor: pointer;
   text-transform: uppercase;
   text-decoration: none;
 }
 .btn a {
   text-decoration: none;
-  color: #f7f7f7;
+  color: #f1f5f9;
   font-weight: bold;
 }
 .btn:hover {
@@ -117,7 +117,7 @@ li {
   border: 2px solid #00cc66;
   top: 5px;
   left: -9px;
-  background: #f7f7f7;
+  background: #f1f5f9;
   overflow: hidden;
   z-index: -1;
 }
@@ -195,7 +195,7 @@ li {
 }
 
 .navbar {
-  background-color: #f7f7f7;
+  background-color: #f1f5f9;
   height: 80px;
   width: 100%;
   display: flex;
@@ -247,7 +247,7 @@ li {
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    background: #f7f7f7;
+    background: #f1f5f9;
     transition: all 0.5s ease-in-out;
   }
 }
@@ -270,7 +270,7 @@ li {
   border-radius: 4px;
   background: #00cc66;
   margin-left: 16px;
-  color: #f7f7f7;
+  color: #f1f5f9;
 }
 .navbar__menu #button:hover {
   background: #fb4b4e;
@@ -278,7 +278,7 @@ li {
 }
 
 .sticky {
-  background-color: #f7f7f7;
+  background-color: #f1f5f9;
   position: fixed;
 }
 
@@ -307,7 +307,7 @@ html {
 }
 
 .hero {
-  background: #f7f7f7;
+  background: #f1f5f9;
 }
 .hero__container {
   display: grid;
@@ -376,7 +376,7 @@ html {
   border: none;
   border-radius: 4px;
   margin-top: 2rem;
-  color: #f7f7f7;
+  color: #f1f5f9;
   position: relative;
   cursor: pointer;
   outline: none;
@@ -384,7 +384,7 @@ html {
 .hero__container--btn a {
   position: relative;
   z-index: 2;
-  color: #f7f7f7;
+  color: #f1f5f9;
   text-decoration: none;
 }
 .hero__container--btn::after {
@@ -473,7 +473,7 @@ html {
 }
 
 .lorem {
-  background-color: #f7f7f7;
+  background-color: #f1f5f9;
   display: grid;
   place-items: center;
 }
@@ -552,7 +552,7 @@ html {
   }
 }
 .services__container--card {
-  background: #f7f7f7;
+  background: #f1f5f9;
   width: 90%;
   padding: 50px;
   border-radius: 5px;
@@ -610,7 +610,7 @@ html {
 }
 
 .process {
-  background: #f7f7f7;
+  background: #f1f5f9;
 }
 .process__container {
   width: 100%;
@@ -729,7 +729,7 @@ html {
 }
 
 .contact {
-  background-color: #f7f7f7;
+  background-color: #f1f5f9;
 }
 .contact__container {
   width: 100%;
